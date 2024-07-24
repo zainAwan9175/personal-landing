@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Potfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!----------- google font link ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!------------- Box Icon Cdn ------------>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!----------------- Swipper Js -------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <!----------- Header Section -------------->
+
+    <header id="header">
+        <nav class="flex">
+            <div class="logo">Zain Ul Abedin</div>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#skill-section">Skills</a></li>
+                <li><a href="#service-section">Services</a></li>
+                <li><a href="#portfolio-section">Portfolio</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+            <i class='bx bx-menu-alt-right'></i>
+        </nav>
+
+        <div class="hero-section container flex">
+            <div class="left">
+                <h1>Hi, I am <span>Zain</span></h1>
+                <h3><span id="auto-type"></span></h3>
+                <p>I specialize in crafting stunning websites tailored to enhance your business. With extensive
+                    experience in web design and development, I bring creativity and functionality together to deliver a
+                    compelling online presence.</p>
+                <a href="#" class="btn">Contact Me </a href="#">
+            </div>
+            <div class="right">
+                <img src="https://avatars.githubusercontent.com/u/157986920?v=4"
+                    alt="">
+            </div>
+        </div>
+    </header>
+
+    <!----------- About Section ---------------->
+
+    <section id="about-section">
+        <h1 class="page-title">About Me</h1>
+        <div class="about-container">
+            <div class="left">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+            </div>
+            <div class="right">
+                <h2>I'm Zain</h2>
+                <h3>A Lead <span>Front End Developer </span>based in <span>Lahore, Pakistan</span></h3>
+                <p>I specialize in crafting stunning websites tailored to enhance your business. With extensive
+                    experience in web design and development, I bring creativity and functionality together to deliver a
+                    compelling online presence.</p>
+                <hr>
+                <div class="experience flex">
+                    <div class="experience-box flex">
+                        <h1>5+</h1>
+                        <p>years of <br> experience</p>
+                    </div>
+                    <div class="experience-box flex">
+                        <h1>3k+</h1>
+                        <p>Happy <br> customers</p>
+                    </div>
+                    <div class="experience-box flex">
+                        <h1>5+</h1>
+                        <p>success <br> projects</p>
+                    </div>
+                </div>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!------------- Skill Page --------------->
+
+    <section id="skill-section" class="container">
+        <h1 class="page-title">Skills</h1>
+        <div class="content">
+            <h2>Education & Skills</h2>
+            <p>I specialize in crafting stunning websites tailored to enhance your business. <br> With extensive
+                experience in web design and development,</p>
+            <div class="skill-container flex">
+                <div class="col-1">
+                    <h3>Education</h3>
+                    <div class="col-1-box boxShadow">
+                        <small>2023-2027</small>
+                        <p><span>BSCS</span> - University of Education</p>
+                    </div>
+                    <div class="col-1-box boxShadow">
+                        <small>2021-2023</small>
+                        <p><span>Pre Engineering</span> - government college Town Ship lahore</p>
+                    </div>
+                    <div class="col-1-box boxShadow">
+                        <small>2018-2020</small>
+                        <p><span>Matric</span> - Islamic School</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3>Skills</h3>
+                    <div class="col-2-box boxShadow">
+                        <div class="timeline-heading flex">
+                            <p>HTML</p>
+                            <p>95%</p>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-width"></div>
+                        </div>
+                    </div>
+                    <div class="col-2-box boxShadow">
+                        <div class="timeline-heading flex">
+                            <p>CSS</p>
+                            <p>85%</p>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-width css-timeline"></div>
+                        </div>
+                    </div>
+                    <div class="col-2-box boxShadow">
+                        <div class="timeline-heading flex">
+                            <p>JAVASCRIPT</p>
+                            <p>80%</p>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-width js-timeline"></div>
+                        </div>
+                    </div>
+                    <div class="col-2-box boxShadow">
+                        <div class="timeline-heading flex">
+                            <p>REACT</p>
+                            <p>80%</p>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-width react-timeline"></div>
+                        </div>
+                    </div>
+                    <div class="col-2-box boxShadow">
+                        <div class="timeline-heading flex">
+                            <p>PHP</p>
+                            <p>75%</p>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-width php-timeline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h3>Awards</h3>
+                    <div class="col-1-box boxShadow">
+                        <small>2020</small>
+                        <p><span>Best Developer</span> - Innovative Tech Institute Lahore</p>
+                    </div>
+                    <div class="col-1-box boxShadow">
+                        <small>2021</small>
+                        <p><span>Best Writer</span> - Analytics University Institute Islamabad</p>
+                    </div>
+                    <div class="col-1-box boxShadow">
+                        <small>2022</small>
+                        <p><span>Best Freelancer</span> - Tech University Institute Karachi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work-experience container">
+        <h2>Work & Experience</h2>
+        <div class="work-container flex">
+            <div class="card boxShadow">
+                <h2>Sr Graphic Designer</h2>
+                <p>Part Time | Office</p>
+                <small>2020 - 2021</small>
+                <hr>
+                <div class="card-name">Johny Bhai</div>
+                <p class="card-detail">I design and develop services for customers of all sizes, speciliazing in
+                    creating stylish, modern websites</p>
+            </div>
+            <div class="card boxShadow">
+                <h2>Sr Graphic Designer</h2>
+                <p>Part Time | Office</p>
+                <small>2020 - 2021</small>
+                <hr>
+                <div class="card-name">Johny Bhai</div>
+                <p class="card-detail">I design and develop services for customers of all sizes, speciliazing in
+                    creating stylish, modern websites</p>
+            </div>
+            <div class="card boxShadow">
+                <h2>Sr Graphic Designer</h2>
+                <p>Part Time | Office</p>
+                <small>2020 - 2021</small>
+                <hr>
+                <div class="card-name">Johny Bhai</div>
+                <p class="card-detail">I design and develop services for customers of all sizes, speciliazing in
+                    creating stylish, modern websites</p>
+            </div>
+        </div>
+    </section>
+
+    <!------------------ Services Section ------------------>
+
+    <section id="service-section" class="container">
+        <div class="page-title">Services</div>
+        <h2>What I Provide</h2>
+        <div class="service-container flex">
+            <div class="service-card boxShadow">
+                <i class='bx bxs-paint'></i>
+                <h3>UI/UX Consultancy</h3>
+                <p class="display-card-1">Learn More <i class='bx bx-right-arrow-alt'></i></p>
+            </div>
+            <div class="service-card boxShadow">
+                <i class='bx bx-images'></i>
+                <h3>Branding & Design</h3>
+                <p class="display-card-2">Learn More <i class='bx bx-right-arrow-alt'></i></p>
+            </div>
+            <div class="service-card boxShadow">
+                <i class='bx bx-code-block'></i>
+                <h3>Web Development</h3>
+                <p class="display-card-3">Learn More <i class='bx bx-right-arrow-alt'></i></p>
+            </div>
+            <div class="service-card boxShadow">
+                <i class='bx bxs-notepad'></i>
+                <h3>Content Writing </h3>
+                <p class="display-card-4">Learn More <i class='bx bx-right-arrow-alt'></i></p>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="service-card-detail-container">
+            <div class="service-card-detail service-card-detail-1 boxShadow">
+                <i class="bx bx-x hide-card-1"></i>
+                <h2>UI/UX Consultancy</h2>
+                <h3>What is UX Consultancy?</h3>
+                <p> UX consulting providing expert advice and guidance to businesses or individuals to enhance the
+                    overall user experience of their products, services, or digital interfaces.</p>
+                <h3>What I Provide</h3>
+                <h4><i class='bx bxs-check-circle'></i>Establish the right ux process</h4>
+                <h4><i class='bx bxs-check-circle'></i>Create exceptional user experinece</h4>
+                <h4><i class='bx bxs-check-circle'></i>Duscover new bussiness opportunities</h4>
+                <h4><i class='bx bxs-check-circle'></i>Save resources</h4>
+            </div>
+            <div class="service-card-detail service-card-detail-2 boxShadow">
+                <i class="bx bx-x hide-card-2"></i>
+                <h2>Branding & Design</h2>
+                <h3>What is Branding & Design?</h3>
+                <p>Branding & Design involves creating a visual identity that reflects the values and personality of a
+                    brand. It includes designing logos, graphics, and other visual elements to establish a consistent
+                    and memorable brand image.</p>
+                <h3>What We Offer</h3>
+                <h4><i class='bx bxs-check-circle'></i>Logo Design</h4>
+                <h4><i class='bx bxs-check-circle'></i>Graphic Design</h4>
+                <h4><i class='bx bxs-check-circle'></i>Graphic Design</h4>
+                <h4><i class='bx bxs-check-circle'></i> Creative Consulting</h4>
+            </div>
+            <div class="service-card-detail service-card-detail-3 boxShadow">
+                <i class="bx bx-x hide-card-3"></i>
+                <h2>Web Development</h2>
+                <h3>Building Digital Experiences</h3>
+                <p>As a web developer, I specialize in crafting robust and dynamic digital experiences. I am dedicated
+                    to creating
+                    websites that not only look great but also function seamlessly.</p>
+                <h3>What I Provide</h3>
+                <h4><i class='bx bxs-check-circle'></i>Responsive and User-Friendly Websites</h4>
+                <h4><i class='bx bxs-check-circle'></i>Efficient and Scalable Web Solutions</h4>
+                <h4><i class='bx bxs-check-circle'></i>Custom Web Application Development</h4>
+                <h4><i class='bx bxs-check-circle'></i>Optimizing User Interactions</h4>
+            </div>
+
+            <div class="service-card-detail service-card-detail-4 boxShadow">
+                <i class="bx bx-x hide-card-4"></i>
+                <h2>Content Writing</h2>
+                <h3>Crafting Compelling Narratives</h3>
+                <p>As a content writer, I specialize in creating engaging and informative content that captivates
+                    audiences. From
+                    blog posts to marketing copy, I deliver content that communicates your message effectively.</p>
+                <h3>What I Provide</h3>
+                <h4><i class='bx bxs-check-circle'></i>Strategic Content Planning</h4>
+                <h4><i class='bx bxs-check-circle'></i>Compelling Copywriting</h4>
+                <h4><i class='bx bxs-check-circle'></i>SEO Optimization</h4>
+                <h4><i class='bx bxs-check-circle'></i>Effective Communication through Words</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <!--------------- Portfolio section ---------------->
+
+    <section id="portfolio-section" class="container">
+        <div class="page-title">Portfolio</div>
+        <div class="portfolio-container flex">
+            <div class="portfolio-card boxShadow">
+                <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D"
+                    alt="">
+                <div class="layer">
+                    <h3>Responsive Design</h3>
+                    <h4>Frontend Development</h4>
+                    <i id="openportfolio1" class='bx bx-link-external'></i>
+                </div>
+            </div>
+            <div class="portfolio-card boxShadow">
+                <img src="https://images.unsplash.com/photo-1551650992-ee4fd47df41f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vYmlsZSUyMGFwcGxpY2F0aW9ufGVufDB8fDB8fHww"
+                    alt="">
+                <div class="layer">
+                    <h3>E-commerce Development</h3>
+                    <h4>Backend Development</h4>
+                    <i id="openportfolio2" class='bx bx-link-external'></i>
+                </div>
+            </div>
+            <div class="portfolio-card boxShadow">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="">
+                <div class="layer">
+                    <h3>Content Management System</h3>
+                    <h4>Web Design</h4>
+                    <i id="openportfolio3" class='bx bx-link-external'></i>
+                </div>
+            </div>
+            <div class="portfolio-card boxShadow">
+                <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9iaWxlJTIwYXBwbGljYXRpb258ZW58MHx8MHx8fDA%3D"
+                    alt="">
+                <div class="layer">
+                    <h3>Web Application Development</h3>
+                    <h4>Full Stack Development</h4>
+                    <i id="openportfolio4" class='bx bx-link-external'></i>
+                </div>
+            </div>
+            <div class="portfolio-card boxShadow">
+                <img src="https://images.unsplash.com/photo-1558655146-6c222b05fce4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9iaWxlJTIwYXBwbGljYXRpb258ZW58MHx8MHx8fDA%3D"
+                    alt="">
+                <div class="layer">
+                    <h3>API Integration</h3>
+                    <h4>Web Development Services</h4>
+                    <i id="openportfolio5" class='bx bx-link-external'></i>
+                </div>
+            </div>
+            <div class="portfolio-card boxShadow">
+                <img src="https://images.unsplash.com/photo-1558885544-2defc62e2e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww"
+                    alt="">
+                <div class="layer">
+                    <h3>Web Development Consultancy</h3>
+                    <h4>Custom Solutions</h4>
+                    <i id="openportfolio6" class='bx bx-link-external'></i>
+                </div>
+            </div>
+        </div>
+        <!-- portfolio popup detail -->
+        <div class="projectDetail-container">
+            <!-- project 1 -->
+            <div class="overlay"></div>
+            <div id="project1Detail1" class="portfolioDetailCard boxShadow">
+                <div class="flex">
+                    <h3>Responsive Design</h3>
+                    <i id="hide-projct-1" class="bx bx-x"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D"
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquam iure sequi repudiandae, at
+                    adipisci sint veniam minima, rerum explicabo odit atque commodi tempora. Sapiente, consequuntur!
+                    Quisquam, esse voluptatibus expedita itaque, voluptates tempore quibusdam inventore </p>
+            </div>
+            <!-- project 2 -->
+            <div class="overlay"></div>
+            <div id="project1Detai2" class="portfolioDetailCard boxShadow">
+                <div class="flex">
+                    <h3>E-commerce Development</h3>
+                    <i id="hide-projct-2" class="bx bx-x"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1551650992-ee4fd47df41f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vYmlsZSUyMGFwcGxpY2F0aW9ufGVufDB8fDB8fHww"
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquam iure sequi repudiandae, at
+                    adipisci sint veniam minima, rerum explicabo odit atque commodi tempora. Sapiente, consequuntur!
+                    Quisquam, esse voluptatibus expedita itaque, voluptates tempore quibusdam inventore </p>
+            </div>
+            <!-- project 3 -->
+            <div class="overlay"></div>
+            <div id="project1Detai3" class="portfolioDetailCard boxShadow">
+                <div class="flex">
+                    <h3>Web Design</h3>
+                    <i id="hide-projct-3" class="bx bx-x"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquam iure sequi repudiandae, at
+                    adipisci sint veniam minima, rerum explicabo odit atque commodi tempora. Sapiente, consequuntur!
+                    Quisquam, esse voluptatibus expedita itaque, voluptates tempore quibusdam inventore </p>
+            </div>
+            <!-- project 4 -->
+            <div class="overlay"></div>
+            <div id="project1Detai4" class="portfolioDetailCard boxShadow">
+                <div class="flex">
+                    <h3>Web Application Development</h3>
+                    <i id="hide-projct-4" class="bx bx-x"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9iaWxlJTIwYXBwbGljYXRpb258ZW58MHx8MHx8fDA%3D"
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquam iure sequi repudiandae, at
+                    adipisci sint veniam minima, rerum explicabo odit atque commodi tempora. Sapiente, consequuntur!
+                    Quisquam, esse voluptatibus expedita itaque, voluptates tempore quibusdam inventore </p>
+            </div>
+            <!-- project 5 -->
+            <div class="overlay"></div>
+            <div id="project1Detai5" class="portfolioDetailCard boxShadow">
+                <div class="flex">
+                    <h3>API Integration</h3>
+                    <i id="hide-projct-5" class="bx bx-x"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1558655146-6c222b05fce4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9iaWxlJTIwYXBwbGljYXRpb258ZW58MHx8MHx8fDA%3D"
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquam iure sequi repudiandae, at
+                    adipisci sint veniam minima, rerum explicabo odit atque commodi tempora. Sapiente, consequuntur!
+                    Quisquam, esse voluptatibus expedita itaque, voluptates tempore quibusdam inventore </p>
+            </div>
+            <!-- project 6 -->
+            <div class="overlay"></div>
+            <div id="project1Detai6" class="portfolioDetailCard boxShadow">
+                <div class="flex">
+                    <h3>Web Development Consultancy</h3>
+                    <i id="hide-projct-6" class="bx bx-x"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1558885544-2defc62e2e2b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww"
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquam iure sequi repudiandae, at
+                    adipisci sint veniam minima, rerum explicabo odit atque commodi tempora. Sapiente, consequuntur!
+                    Quisquam, esse voluptatibus expedita itaque, voluptates tempore quibusdam inventore </p>
+            </div>
+        </div>
+    </section>
+
+    <!---------- Next Project -------------->
+
+    <section class="next-project container boxShadow flex">
+        <div class="left">
+            <h6>Lets Talk</h6>
+            <h4>About Your</h4>
+            <h1>Next Project</h1>
+        </div>
+        <div class="right">
+            <button class="btn">Get in Touch <i class='bx bxs-send'></i></button>
+        </div>
+    </section>
+
+    <!------------- Contact Form --------------->
+
+    <section id="contact-section" class="container">
+        <h1 class="page-title">Contact Me</h1>
+        <div class="contact-container flex">
+            <div class="left">
+                <h2>Let Discuss your Project</h2>
+                <div class="contact-box ">
+                    <i class="bx bx-phone"></i>
+                    <div class="contact-box-detail">
+                        <h5>Phone</h5>
+                        <small>03110861625</small>
+                    </div>
+                </div>
+                <div class="contact-box ">
+                    <i class='bx bxs-envelope'></i>
+                    <div class="contact-box-detail">
+                        <h5>Email Address</h5>
+                        <small>zain@gmail.com</small>
+                    </div>
+                </div>
+                <div class="contact-box ">
+                    <i class='bx bxs-map'></i>
+                    <div class="contact-box-detail">
+                        <h5>Official Address</h5>
+                        <small>724-B San Lahore CA23</small>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>I'm always open to discussing project <span>design work and parterships.</span></h2>
+                <form action="">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="text" name="" id="subject" placeholder="Subject">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button class="btn">Get in Touch <i class='bx bxs-send'></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!---------------- Footer -------------->
+
+    <footer>
+        <div class="footer-container container flex">
+            <div class="col-3">
+                <h2>Zain</h2>
+                <h3>Front End Developer</h3>
+                <a href="#about-section">
+                    <h5>About Me</h5>
+                </a>
+            </div>
+            <div class="col-3 second-col">
+                <p>More</p>
+                <div class="flex">
+                    <a href="#skill-section">
+                        <p>Skills</p>
+                    </a>
+                    <a href="#service-section">
+                        <p>Services</p>
+                    </a>
+                    <a href="#portfolio-section">
+                        <p>Portfolio</p>
+                    </a>
+                    <a href="#contact-section">
+                        <p>Contact</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3 last-col">
+                <p>Follow</p>
+                <div class="socila-icons flex">
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-tiktok'></i>
+                    <i class='bx bxl-twitter'></i>
+                    <i class="bx bx-phone"></i>
+                    <i class='bx bxl-vk'></i>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <i class="bx bx-copyright"> 2023 by Zain All Right Reserved.</i>
+        </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to Top"><i class='bx bx-chevron-up'></i></button>
+
+    <!------------- JavaScript Links ------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
